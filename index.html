@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h2 id="prueba"></h2>
+	<div id="hola">
+		hola put@s
+	</div>
+	<script type="text/javascript">
+		window.alert("hello");/*para que el usuario lo vea*/
+		prompt("What's your name?");/*es para que el usuario ingrese información*/
+		document.getElementById('prueba').innerHTML="hola me enviaron desde un script";/*para saber a que id se refiere y que se le va a enviar*/
+		document.write("<h1>el precio es de 5</h1>");/*para ingresar al html al documento desde el javascript*/
+		console.log("hola consola");/*para mostrar en la consola*/
+		document.write(shampooMarca + precio); para mostrar en la página
+		var num = 4;
+
+		var name = prompt("what's your name?");
+		document.write(name);
+		var date = Date(); /*captura la fecha*/
+		document.write(date);
+		var location = window.location;
+		document.write(location);
+
+		var shampooMarca = "el shampoo Marca head n shoulders cuesta : ";/*asignamos a la variable shampoo la cadena (el shampoo Marca head n shoulders cuesta :)*/
+		var precio = parseInt(prompt("Ingresa el valor del shampoo: "));/*le asignas a la variable precio el dato capturado por el usuario y lo parseas (lo conviertes en tipo int)*/
+		var iva = precio * 0.16; /*le asignas a la variable iva el 16% del precio asignado*/
+		console.log(shampooMarca + parseInt(precio + iva));/*le pones en consola el shampoo y el precio más el iva*/
+		document.write("<p>" + shampooMarca + parseInt(precio + iva) + " más IVA incluido</p>");/*pones en el html una etiqueta p y dentro de ella pones la marca y la suma del precio y el iva*/
+
+		var radio = parseInt(prompt("Ingresa el Radio: "));/*le asigno a la variable radio el radio capturado deśpués de parcearlo(volverlo de tipi int (int es número entero))*/
+		var area = Math.PI*Math.pow(radio,2);/*le asigno a la variable area el radio elevado al cuadrado y multiplicado por PI*/
+		document.write("<h1>" + area + "</h1>");/*muestro la variable area en un h1*/
+
+		var centigrados = parseInt(prompt("Ingresa la temperatura en centigrados : "));/*acá capturamos el valor de la temperatura y se la asignamos a la variable centigrados*/
+		var fahrenheit = 1.8*(centigrados+32);/*acá hacemos la operación y la asignamos a la variable fahrenheit*/
+		if (fahrenheit > 100){/*si la temperatura es mayor a 100*/
+			document.getElementById('hola').innerHTML = fahrenheit;/*muestra la temperatura*/
+			document.getElementById("hola").style.background = 'blue';/*y el color de fondo del div es azul*/
+
+		}else if(fahrenheit < 100){/*si la temperatura es menor a 100*/
+			document.getElementById('hola').innerHTML = fahrenheit;
+			document.getElementById("hola").style.background = 'red';/*color es rojo*/
+		}else{/*si no se cumple la primera y segunda condición entra acá (cuando fahrenheit es igual a 100)*/
+			document.getElementById('hola').innerHTML = fahrenheit;
+			document.getElementById("hola").style.background = 'gray';/*el color es gris*/
+		}
+	</script>
+</body>
+</html>
